@@ -7,11 +7,8 @@ import java.util.Map;
 public class Main {
     public static void main(String[] args) {
         String [] rows = new String[] {"мама","тато","баба","їж їжак желе","коко"};
-        //masuv(rows);
         ArrayList<Character> result = masuv(rows);
         System.out.println(result);
-
-
     }
     public static ArrayList<Character> masuv(String[] rows){
         int countString=0;
@@ -19,7 +16,6 @@ public class Main {
         ArrayList<Character> unique_litery = new ArrayList<>();
     // перебераємо слова в масиві
         for(int i=0;i<rows.length;i++){
-        // rows[i].toCharArray();
         Map<Character, Integer> uniquechar = new HashMap<>();
 
         char[] masuvchar = rows[i].toCharArray();
@@ -45,19 +41,14 @@ public class Main {
         if(countelement == true) {
             countString++;
             slova.add(rows[i]);
-            // unique_litery.add(slova(b));
             System.out.println(String.format("%s. %s кожна буква повторюється парну кількість разів ", countString, rows[i]));
         }
         if(countString == 2){
            break;
         }
-
     }
         // перебераємо 2 слова в масиві
-        //for(int i=0;i<slova.length;i++){
-            //slova[i].toCharArray();
         for(String slovo : slova){
-
             char[] masuvslovo = slovo.toCharArray();
             // перебераємо кожну букву в слові
             for (Character litera : masuvslovo) {
@@ -66,7 +57,6 @@ public class Main {
                 }
             }
     };
-
 return unique_litery;
     }
 }
